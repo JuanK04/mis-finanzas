@@ -1,0 +1,8 @@
+{
+  "name": "mis-finanzas",
+  "version": "1.0.0",
+  "description": "Registro de ingresos y gastos (Node + SQLite, sin dependencias)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22.13.0" }
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mis-finanzas
+    runtime: node
+    plan: free
+    buildCommand: echo "sin dependencias que instalar"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+    # Para conservar los datos entre despliegues (requiere plan de pago), agrega:
+    # disk:
+    #   name: datos
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    # y la variable de entorno DB_PATH=/var/data/finanzas.db
